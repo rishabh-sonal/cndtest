@@ -1,0 +1,7 @@
+<div>
+  <select [(ngModel)]="selectedMake">
+    <option disabled value="0">Select A Make</option>
+    <option *ngFor="let make of makes" [value]="make.make">{{make.name}}</option>
+  </select>
+</div>
+<app-models [make]="selectedMake" *ngIf="selectedMake"></app-models>

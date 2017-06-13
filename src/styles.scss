@@ -1,0 +1,53 @@
+$val: 200px;
+$font: arial;
+$margin: 20px;
+$grey-clr : #555;
+$white-clr : #fff;
+$light-grey-clr : #ccc;
+$width : 600px;
+
+@mixin border-radius($r){
+  border-radius: $r;
+  -ms-border-radius: $r;
+}
+@mixin box-shadow($bs){
+  box-shadow: $bs;
+  -ms-box-shadow: $bs;
+}
+@mixin transition($transProp){
+  transition: $transProp;
+  -ms-transition: $transProp;
+}
+body {
+  max-width: $width;
+  margin: 0 auto;
+}
+h1{
+  color: black;
+  font-family: $font;
+  text-align: center;
+}
+select {
+  font-family: $font;
+  height: 30px;
+  width: $val;
+  margin-top: $margin;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  color: $grey-clr;
+  background-color: $white-clr;
+  background-image: none;
+  border: 1px solid $light-grey-clr;
+  @include border-radius(4px);
+  @include box-shadow("inset 0 1px 1px rgba(0,0,0,.75)");
+  @include transition("border-color ease-in-out .15s");
+}
+
+img {
+   width: $width;
+   margin-top: $margin;
+ }
+
+

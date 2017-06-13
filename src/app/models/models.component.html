@@ -1,0 +1,9 @@
+
+<div>
+  <select (change)="getModel($event.target.value)">
+    <option value="0">All Models</option>
+    <option *ngFor="let model of models" [value]="model.model">{{model.name}}</option>
+  </select>
+</div>
+
+<img [attr.src]="model.image" *ngIf="model">
